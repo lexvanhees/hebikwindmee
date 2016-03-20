@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+   <head>
+		<meta charset="UTF-8">
+		<title><?php echo $page_title;?></title>
+
+		<meta name="viewport" 			content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+		<link rel="stylesheet"			href="style.css?v=1">
+		<link rel="shortcut icon" 		href="favicon.ico">
+	</head>
+
+	<body>
+		<div id="content">
+			<div class="info">
+				<h1>Heb ik wind mee?</h1>
+				<h2 class="subtitle">Check direct of je wind mee hebt onderweg!</h2>
+			</div>
+
+			<div class="address" id="address">
+				<form action="includes/render.php" method="post" id="postform">
+					<div class="first">
+						<label for="geolocation" id="label_geo">
+							<span>Gebruik je GPS</span>
+							<input type="checkbox" value="1" name="geolocation" id="geolocation">
+						</label>
+
+						<span class="choise">Of</span>
+
+						<label for="address_from">Van</label>
+						<input type="text" id="address_from" autofocus="autofocus" name="address_from" class="autocomplete" placeholder="vb: Rivierenbuurt, Amsterdam">
+						<input type="hidden" value="" name="geocoor" id="geocoor">
+					</div>
+
+					<div class="second">
+						<label for="address_to">Naar</label>
+						<input type="text" id="address_to" name="address_to" class="autocomplete" placeholder="vb: IJburg, Amsterdam"> 
+					</div>
+
+					<div class="last">
+						<input type="submit" name="go" value="Gaan!" onClick="ga('send', 'event', 'wind', 'search', 'windagain');"> 
+					</div>
+				</form>
+			</div>	
+			
+			<div class="first_result">
+				<strong class="data_wind">Wind mee of wind tegen</strong>
+				<p>
+					<span class="data_wind_type">Stevige</span> 
+					(<span class="data_wind_d"></span>) wind | Windkracht <span class="data_windpower"></span> | <span class="data_speed"></span>km p/u
+					<span class="wind_warn"></span>					
+				</p>
+				<span id="other">Terug &amp; opnieuw</span>
+			</div>
+
+			<div class="middle">
+				<div id="animation">
+				    <div class="millRoof"></div>
+				    <div class="millBase">
+				        <div></div>
+				        <div></div>
+				        <div></div>
+				    </div>
+				    <div class="millSpin">
+				        <div></div>
+				        <div></div>
+				        <div></div>
+				        <div></div>
+				   	</div>
+				</div>
+			
+				<div id="clouds">
+					<div class="cloud x1"></div>
+					<div class="cloud x2"></div>
+					<div class="cloud x3"></div>
+					<div class="cloud x4"></div>
+					<div class="cloud x5"></div>
+				</div>
+
+				<div class="windmill first">
+		          <div class="windmill-base"></div>
+		          <div class="windmill-body"></div>
+		          <div class="windmill-wing1"></div>
+		          <div class="windmill-wing2"></div>
+		        </div>
+
+		        <div class="windmill second">
+		          <div class="windmill-base"></div>
+		          <div class="windmill-body"></div>
+		          <div class="windmill-wing1"></div>
+		          <div class="windmill-wing2"></div>
+		        </div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="functions.js?v=1"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+		
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'>
+
+	</body>
+</html>
