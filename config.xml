@@ -4,9 +4,9 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.hebikwindmee.app"
-        version   = "1.0.0">
+        version   = "1.0.1">
 
-    <name>Heb ik wind mee</name>
+    <name>Heb ik wind mee?</name>
 
     <description>
         Moet je zo weg? En vraag je je af of je de wind mee of tegen hebt? Vind het uit!
